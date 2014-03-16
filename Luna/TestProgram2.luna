@@ -1,0 +1,19 @@
+﻿module Main
+
+infixr 10 ->
+infixr 9 .
+infixl 6 +
+
+id x :: x -> x;
+id x = x;
+
+(.) a b c :: (c -> b) -> (a -> c) -> a -> b;
+(f . g) x = f (g x);
+
+idid a :: a -> a;
+idid = id . id;
+
+main :: Int;
+main = idid 2;
+
+;
